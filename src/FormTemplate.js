@@ -8,6 +8,7 @@ const FormTemplate = () => {
     // Fonction pour envoyer l'email
     const sendEmail = (e) => {
         e.preventDefault();
+        const formMess = document.querySelector('.form-message');
 
         // Envoie le formulaire via EmailJS en utilisant la référence du formulaire
         emailjs
@@ -16,6 +17,7 @@ const FormTemplate = () => {
                 console.log(result.text);
                 // remise à 0 du formulaire
                 form.current.reset();
+                formMess.innerHTML = "<p class='Success'> Message envoyé ! </p>";
             }, (error) => {
                 console.log(error.text);
             });
