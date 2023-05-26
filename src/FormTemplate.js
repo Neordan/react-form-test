@@ -15,9 +15,18 @@ const FormTemplate = () => {
             .sendForm('service_jiwg0tn', 'template_pqn415f', form.current, 'z0M5yTmtGUHErJ_2E')
             .then((result) => {
                 console.log(result.text);
+
                 // remise à 0 du formulaire
                 form.current.reset();
+
+                // Affichage du message de succès 
                 formMess.innerHTML = "<p class='Success'> Message envoyé ! </p>";
+
+                // Fonction qui supprime le message dans un temps imparti 
+                setTimeout(() => {
+                    formMess.innerHTML = "";
+                }, 2500)
+
             }, (error) => {
                 console.log(error.text);
             });
