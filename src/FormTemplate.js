@@ -12,7 +12,7 @@ const FormTemplate = () => {
 
         // Envoie le formulaire via EmailJS en utilisant la référence du formulaire
         emailjs
-            .sendForm('service_jiwg0tn', 'template_pqn415f', form.current, 'z0M5yTmtGUHErJ_2E')
+            .sendForm('service_jiwg0t', 'template_pqn415f', form.current, 'z0M5yTmtGUHErJ_2E')
             .then((result) => {
                 console.log(result.text);
 
@@ -29,7 +29,7 @@ const FormTemplate = () => {
                 
             }, (error) => {
                 console.log(error.text);
-                formMess.innerHTML = "<p class='error'> Une erreur est survenue, veuillez réessayer </p> ! </p>";
+                formMess.innerHTML = "<p class='Error'> Une erreur est survenue, veuillez réessayer !</p>";
             });
     };
 
