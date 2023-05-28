@@ -34,8 +34,10 @@ label {
 
 input,
 textarea {
-  width: 80%;
+  width: 60%;
   margin: 5px 0 10px 0;
+  outline: none;
+  border: 2px solid #000;
 }
 
 button {

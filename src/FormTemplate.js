@@ -42,7 +42,7 @@ const FormTemplate = () => {
                 <input type="email" name="email" required autoComplete="off" />
                 <label>Message</label>
                 <textarea name="message" required />
-                <input type="submit" value="Envoyer" />
+                <button type="submit">Envoyer</button>
             </form>
             <div className="form-message"></div>
         </div>
