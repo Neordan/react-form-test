@@ -21,14 +21,15 @@ const FormTemplate = () => {
 
                 // Affichage du message de succès 
                 formMess.innerHTML = "<p class='Success'> Message envoyé ! </p>";
-
+                
                 // Fonction qui supprime le message dans un temps imparti 
                 setTimeout(() => {
                     formMess.innerHTML = "";
                 }, 2500)
-
+                
             }, (error) => {
                 console.log(error.text);
+                formMess.innerHTML = "<p class='error'> Une erreur est survenue, veuillez réessayer </p> ! </p>";
             });
     };
 
